@@ -38,7 +38,7 @@ inline double AngleSampler::draw_angle()
     double l = cum_len(cum_len.n_elem - 1);
     double sample = l * arma::randu<double>();
     int idx = 1;
-    for (idx = 1; idx < cum_len.n_elem; idx++)
+    for (unsigned idx = 1; idx < cum_len.n_elem; idx++)
     {
         if (cum_len(idx - 1) < sample && cum_len(idx) >= sample)
         {

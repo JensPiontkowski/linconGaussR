@@ -4,6 +4,7 @@
 *.o
 *.so
 src/sandbox.cpp
+src/linconGaussR.dll
 R/sandbox.R
 tests/*
 real_data/*

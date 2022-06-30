@@ -39,7 +39,7 @@ class ActiveIntersections{
 inline arma::Col<int> ActiveIntersections::_index_active(const arma::vec &t, double dt){
     arma::Col<int> idx(t.n_elem);
     arma::Mat<int> temp;
-    for(int i = 0; i < t.n_elem; i++){
+    for(unsigned int i = 0; i < t.n_elem; i++){
         temp = lincon.integration_domain(ellipse.x(t(i)+dt));
         temp -= lincon.integration_domain(ellipse.x(t(i)-dt));
         idx(i) = temp(0);
